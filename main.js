@@ -14,7 +14,8 @@ function GetPercent(e) {
   console.log(height)
   console.log(playbackRate)
   bar.style.height = height
-  bar.textContent = playbackRate.toFixed(2) + "x"
+  bar.textContent = `${playbackRate.toFixed(2)}x`
+  video.playbackRate = playbackRate
 }
 
 speed.addEventListener('mousemove', (GetPercent))
