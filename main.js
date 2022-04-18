@@ -10,8 +10,11 @@ function GetPercent(e) {
   const min = 0.4
   const max = 4
   const height = Math.round(percent * 100) + "%"
+  const playbackRate = percent * (max - min) + min
   console.log(height)
+  console.log(playbackRate)
   bar.style.height = height
+  bar.textContent = playbackRate.toFixed(2) + "x"
 }
 
 speed.addEventListener('mousemove', (GetPercent))
